@@ -41,12 +41,12 @@ class App extends Component{
       <View style={styles.container}>
         <View style={styles.subcontainer}>
 
-          <CustomButton label="-" action={this.handledown}> </CustomButton>
+          <CustomButton label="-"/> 
           <View style={styles.CounterContainer}>
             <Text style={styles.Counter}>{counter}</Text>
           </View>
 
-          <CustomButton label="+" action={this.handleup}> </CustomButton>
+          <CustomButton label="+" action={this.handleup}/> 
            
 
         </View>  

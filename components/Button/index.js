@@ -1,10 +1,16 @@
 import React ,{Component} from 'react';
 import {Text,TouchableOpacity,StyleSheet} from 'react-native';
+import PropTypes from 'prop-types';    
 
 
 
 class Button extends Component
 {
+   
+
+
+
+
     render(){
 
         const{label, action} = this.props;  // aca lo que hace es del objeto props obtiene el parametro que se llama label(la etiqueta del boton) y la action,
@@ -18,7 +24,11 @@ class Button extends Component
 
             }//para no estar creando 2 componentes uno para mas y otro para menos hacemos uso de props
 }
-
+Button.propTypes = 
+{
+    label: PropTypes.string.isRequired,
+    action: PropTypes.func.isRequired,
+}
 const styles = StyleSheet.create({
   
     btn:{
