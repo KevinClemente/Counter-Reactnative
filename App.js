@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import CustomButton from './components/Button';
   
 class App extends Component{
 
@@ -40,17 +41,13 @@ class App extends Component{
       <View style={styles.container}>
         <View style={styles.subcontainer}>
 
-          <TouchableOpacity style={styles.btn} onPress={this.handledown}>
-            <Text style={styles.btnTxt} >-</Text>
-          </TouchableOpacity>
-
+          <CustomButton label="-" action={this.handledown}> </CustomButton>
           <View style={styles.CounterContainer}>
             <Text style={styles.Counter}>{counter}</Text>
           </View>
 
-          <TouchableOpacity style={styles.btn} onPress={this.handleup}>
-            <Text style={styles.btnTxt} >+</Text> 
-          </TouchableOpacity>  
+          <CustomButton label="+" action={this.handleup}> </CustomButton>
+           
 
         </View>  
       </View>//onPres llama la funcion handleup pero si se le pusiera this.handleup() se estaria ejecutando siempre, 
